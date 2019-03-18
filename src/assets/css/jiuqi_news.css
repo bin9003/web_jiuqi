@@ -1,0 +1,9 @@
+#news_content{width:100%; margin:0 auto;}
+.news_content{width:1157px; margin:0 auto;}
+.news_list{padding-top:100px; width:1157px; margin:0 auto; background:#FFF; padding-bottom:100px;}
+.news_list ul{width:750px; margin:0 auto;}
+.news_list ul li{line-height:40px;font-family:"微软雅黑";border-bottom:1px dotted #CCC;color:#666666; list-style:disc;}
+.news_list ul li a{text-decoration:none; font-size:14px;font-family:"微软雅黑";color:#666666;}
+.news_list ul li a:hover{color:#f00}
+
+.clear_news{clear:both;}
