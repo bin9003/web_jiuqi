@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <indexBanner :banner="banner" />
-    <HomeContent :iSolution="iSolution" :iSupport="iSupport" :iCase="iCase"></HomeContent>
+    <indexBanner :banner="home.banner" />
+    <HomeContent :iSolution="home.iSolution" :iSupport="home.iSupport" :iCase="home.iCase"></HomeContent>
   </div>
 </template>
 
@@ -9,6 +9,7 @@
 import { Component, Vue, Prop } from 'vue-property-decorator'
 import indexBanner from '@/components/carousel/throughly.vue'
 import HomeContent from '@/vModel/HomeContent.vue'
+import axios from 'axios'
 
 @Component({
   components: {
@@ -17,129 +18,18 @@ import HomeContent from '@/vModel/HomeContent.vue'
   }
 })
 export default class Home extends Vue {
+  mounted () {
+    let _this = this
+    axios.get('/data/appData.json').then(function (response) {
+      _this.$set(_this.$data, 'home', response.data)
+      // console.log(response, _this.$data)
+    }).catch(function (error) {
+      console.log(error)
+    })
+  }
   data () {
     return {
-      dataHeaders: {
-        nav: {
-          active: {
-            url: '/',
-            innerText: '首页'
-          },
-          lists: [
-            {
-              url: '/',
-              innerText: '首页'
-            },
-            {
-              url: '/new',
-              innerText: '新闻中心'
-            },
-            {
-              url: '/solution',
-              innerText: '解决方案'
-            },
-            {
-              url: '/case',
-              innerText: '经典案例'
-            },
-            {
-              url: '/support',
-              innerText: '服务支持'
-            },
-            {
-              url: '/investor',
-              innerText: '投资者'
-            },
-            {
-              url: '/about',
-              innerText: '关于久其'
-            }
-          ]
-        }
-      },
-      banner: [
-        {
-          src: '/images/banner/20190128.jpg',
-          sname: '1'
-        },
-        {
-          src: '/images/banner/news_20190101.jpg',
-          sname: '2'
-        },
-        {
-          src: '/images/banner/news0804.jpg',
-          sname: '3'
-        },
-        {
-          src: '/images/banner/news180724.jpg',
-          sname: '4'
-        }
-      ],
-      iSolution: [
-        {
-          src: '/images/homeSolution/sol_zfgl.jpg',
-          url: '',
-          sname: ''
-        },
-        {
-          src: '/images/homeSolution/sol_zftj.jpg',
-          url: '',
-          sname: ''
-        },
-        {
-          src: '/images/homeSolution/sol_dsj.jpg',
-          url: '',
-          sname: ''
-        },
-        {
-          src: '/images/homeSolution/sol_zcgl.jpg',
-          url: '',
-          sname: ''
-        },
-        {
-          src: '/images/homeSolution/sol_cwgx.jpg',
-          url: '',
-          sname: ''
-        },
-        {
-          src: '/images/homeSolution/sol_hbbb.jpg',
-          url: '',
-          sname: ''
-        }
-      ],
-      iSupport: [
-        {
-          src: '/images/homeSupport/cpzc.jpg',
-          url: '',
-          sname: '',
-          title: '产品注册',
-          content: '产品注册适用于久其单机版产品，在线注册服务时间为工作日的办公时间（早9晚6）。'
-        },
-        {
-          src: '/images/homeSupport/xzzq.jpg',
-          url: '',
-          sname: '',
-          title: '下载专区',
-          content: '为您提供软件和参数等程序，每个下载条目前面有编号，请选择适合您的文件下载，以免影响您的工作'
-        },
-        {
-          src: '/images/homeSupport/cjwt.jpg',
-          url: '',
-          sname: '',
-          title: '常见问题',
-          content: '我公司呼叫中心在日常工作中根据客户咨询情况，收集、分析和整理出来的多发问题'
-        },
-        {
-          src: '/images/homeSupport/pxjy.jpg',
-          url: '',
-          sname: '',
-          title: '培训教育',
-          content: '主要针对久其现有产品体系设置了不同级别的培训与认证，咨询收费及相关事宜后参加相应课程的学习'
-        }
-      ],
-      iCase: [],
-      ifooter: {
-      }
+      home: {}
     }
   }
 }
