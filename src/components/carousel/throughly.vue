@@ -31,12 +31,12 @@ export default class Throughly extends Vue {
   }
   @Watch('banner')
   onChildChanged (val: string, oldVal: string) {
-    // console.log(this.banner)
-    this.$set(this.$data, 'bannerNow', this.banner[0]) // 设置第一个banner 图片
+    let This: any = this
+    this.$set(This.$data, 'bannerNow', This.banner[0]) // 设置第一个banner 图片
     this.bannerCarousel()
   }
   bannerCarousel () {
-    let This = this
+    let This: any = this
     let index = this.$data.count
     setInterval(function () {
       index++

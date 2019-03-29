@@ -2,9 +2,9 @@
   <div class="nav">
     <ul>
       <li v-for="list in dataNav.lists" :key="list.key">
-        <a :href="list.url" target="_self" :class="[dataNav.active.url == list.url ? 'selected' : '']">
+        <router-link :to="list.url" target="_self" :class="[dataNav.active.url == list.url ? 'selected' : '']">
           <span>{{list.innerText}}</span>
-        </a>
+        </router-link>
       </li>
     </ul>
   </div>

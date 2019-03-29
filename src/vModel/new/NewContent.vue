@@ -1,7 +1,7 @@
 <template>
   <div class="newContent">
-    <ImgBanner></ImgBanner>
-    <ListDefine></ListDefine>
+    <ImgBanner :banner="newList.banner"></ImgBanner>
+    <ListDefine :listData="newList.lists"></ListDefine>
   </div>
 </template>
 
@@ -16,5 +16,7 @@ import ListDefine from '@/components/list/Define.vue'
     ListDefine
   }
 })
-export default class NewContent extends Vue {}
+export default class NewContent extends Vue {
+  @Prop(Object) readonly newList !: Object
+}
 </script>

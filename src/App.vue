@@ -62,28 +62,28 @@ export default class App extends Vue {
           {
             title: {
               name: '关于久其',
-              url: ''
+              url: '/about'
             },
             lists: [
               {
                 name: '新闻中心',
-                url: ''
+                url: '/new'
               },
               {
                 name: '联系我们',
-                url: ''
+                url: '/'
               },
               {
                 name: '法律条款',
-                url: ''
+                url: '/'
               },
               {
                 name: '网站地图',
-                url: ''
+                url: '/'
               },
               {
                 name: '久其元素',
-                url: ''
+                url: '/'
               }
             ]
           },

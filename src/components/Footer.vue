@@ -5,14 +5,14 @@
         <div class="bottomtop">
           <ul v-for="fList in dataFooter.fNav" :key="fList.key" style="margin-left:30px">
             <li>
-              <a :href="fList.title.url">
+              <router-link :to="fList.title.url">
                 <span>
                   <strong>{{fList.title.name}}</strong>
                 </span>
-              </a>
+              </router-link>
             </li>
             <li v-for="NavList in fList.lists" :key="NavList.key">
-              <a :href="NavList.url">{{NavList.name}}</a>
+              <router-link :to="NavList.url">{{NavList.name}}</router-link>
             </li>
           </ul>
           <div class="bottomtopnum" style="margin-left: 60px;">
@@ -52,8 +52,6 @@
 
 <script lang="ts">
 import { Component, Vue, Prop } from 'vue-property-decorator'
-import Search from '@/components/from/search/FullSite.vue'
-import Nav from '@/components/nav/Define.vue'
 @Component({
   components: {
     Search,

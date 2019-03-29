@@ -25,7 +25,7 @@ ul li a{text-decoration:none}
 .fulldiv{width: 100%;position:absolute;z-index:2;top:0;left:0;bottom:0;}
 
 /***********************************首页header**********************************************/
-#header{margin-bottom:60px;}
+#header{margin-bottom:60px; min-width: 1200px;}
 #search{margin:0 auto;background:url(../images/index_search_l.jpg) no-repeat scroll right;}
 .ss_input_index{font-family:"微软雅黑"; font-size:13px; border:0;color:#a7a7a7; height:22px; background:#fFF}
 .ss_button_index{background:url(../images/index_search_l.jpg) no-repeat scroll center; border:0; }
@@ -70,7 +70,7 @@ ul li a{text-decoration:none}
 .service_1 img{float:left; margin-top:15px}
 .rj1 ul{width:160px; float:left;  margin:20px 0 0 5px}
 .rj1 ul li{width:78px; height:32px;float:left; font-size:14px; font-family:"微软雅黑"}
-.rj1 ul li a{color:#666;} 
+.rj1 ul li a{color:#666;}
 .rj1 ul li a:hover{color:#f00}
 #line{width:954px; height:14px;  margin:0 auto; float:left}
 /*********************************分页*******************************************/

@@ -2,7 +2,7 @@
   <div class="w200 mt5">
     <!--方案_Begin-->
     <div class="w200">
-      <img alt src="../assets/images/solution/solution.jpg">
+      <img alt src="../../public/images/solution/solution.jpg">
       <h4>
         &nbsp;
         <span style="color:#333333">解决方案</span>
@@ -38,7 +38,7 @@
     <!--方案_End-->
     <!--产品_Begin-->
     <div class="w200">
-      <img alt src="../assets/images/solution/product.jpg">
+      <img alt src="../../public/images/solution/product.jpg">
       <h4>
         &nbsp;
         <span style="color:#333333">产品平台</span>
@@ -52,7 +52,7 @@
       </ul>
     </div>
     <div class="w200">
-      <img alt src="../assets/images/solution/yfpt.jpg">
+      <img alt src="../../public/images/solution/yfpt.jpg">
       <h4>
         &nbsp;
         <span style="color:#333333">研发平台</span>
