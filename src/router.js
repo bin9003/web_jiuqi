@@ -22,9 +22,16 @@ export default new Router({
           component: () => import('./views/Home.vue')
         },
         {
-          path: 'news/',
+          path: 'news',
           name: 'news',
-          component: () => import('./views/news/News.vue')
+          component: () => import('./views/news/News.vue'),
+          children: [
+            {
+              name: 'newdetail',
+              path: 'newdetail',
+              compontent: () => import('./views/news/News.vue')
+            }
+          ]
         }
       ]
     }

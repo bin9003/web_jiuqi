@@ -118,7 +118,6 @@
         </div>
       </div>
     </div>
-    <div>{{isShow}}</div>
   </div>
 </div>
 </template>
@@ -152,12 +151,6 @@ export default {
     }).catch(function (error) {
       console.log(error)
     })
-    this.$store.dispatch('addCount', 10)
-  },
-  computed: {
-    isShow () {
-      return this.$store.getters.getCount
-    }
   }
 }
 </script>

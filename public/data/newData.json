@@ -1,0 +1,16 @@
+{
+  "banner": {
+    "src": "/images/news_banner.jpg",
+    "name": "新闻图"
+  },
+  "lists": [
+    {
+      "url": "/layout/new/newdetail",
+      "content": "久其软件与中国烟草总公司云南省公司共同探讨财务共享建设"
+    },
+    {
+      "url": "/layout/new/newdetail",
+      "content": "高校年报编报恰逢“及时雨” 久其启动行资报告培训全国行"
+    }
+  ]
+}
