@@ -54,8 +54,6 @@
 import { Component, Vue, Prop } from 'vue-property-decorator'
 @Component({
   components: {
-    Search,
-    Nav
   }
 })
 export default class Header extends Vue {
